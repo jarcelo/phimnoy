@@ -62,6 +62,7 @@ header nav {
     text-align: center;
     background-color: #508572;
     border-bottom: 2px solid #ef9432;
+    
 }
 header nav ul {
     list-style: none;
@@ -99,11 +100,11 @@ header nav .active a:visited {
     padding-bottom: 1%;
     height: auto;
     /*float: left;*/
+    /*Border Radius*/
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
     /*Box Shadows*/
     -moz-box-shadow: 0 0 35px rgba(0,0,0,.2);
     -webkit-box-shadow: 0 0 35px rgba(0,0,0,.2);
@@ -125,11 +126,14 @@ tfoot, thead, tr, th, td {
 }
 
 
+/*===============================================================
+    Featured Dish
+  ===============================================================*/
 
-
-
-
-
+#mainContent #featured-dish {
+    height: 600px;
+    clear: both;   
+}
 
 #featured-dish h1 {
     text-align: center;
@@ -163,47 +167,120 @@ tfoot, thead, tr, th, td {
     float: left;
     margin: 30px 14px;
 }
-#mainContent #opening {
-    text-align: center;
+
+/*=============================================================
+    Le Us Help Div
+  =============================================================*/
+#opening {
+    clear: both;
+    width: 100%;
+    text-align: right;
     font-weight: 300;
+    /*font-size: 1.3em;*/
     color: #2e95ad;
+    margin-top: 3%;
+    min-height: 500px;
+    /*background-color:rgba(192,192,192,0.3);*/
+    /*background: -webkit-linear-gradient(#c6e4d9, rgba (244, 246, 247, .4)); /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(#c6e4d9, #fff); /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(#c6e4d9, #fff); /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(#c6e4d9, #fff); /* Standard syntax (must be last) */
+    /*border-top: 2px solid #ef9432;*/
 }
-#mainContent #opening #we-help {
-    /*width:  40%;*/
-    /*border:  1px solid red;*/
+#opening h1 {
     /*line-height: 60px;*/
     /*float: left;*/
     /*height: 200px;*/
-    clear: both;
-    background-color: rgba(192,192,192,0.4);
-    font-size: 1.50em;
+    font-size: 3em;
+    color: #508572;
     /*text-align: right;*/
     padding-right: 5%;
     font-weight: 100;
-    text-align: right;
+    text-align: center;
+    background-color: rgba(192,192,192,0.4);
 }
-
-#mainContent #opening #events {
+#sample {
+    float: left;
+    width: 50%;
+    margin-top: 1%;
+    text-align: center;
+}
+#sample img {
+    border-radius: 50%;
+    margin:  0 auto;
+}
+#sample blockquote {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: #508572;
+    font-style: italic;
+    margin:  0 auto;
+    font-size: 1.5em;
+    width: 50%;
+}
+footer.phimQuote {
+    font-size: 1.5em;
+    background-color: rgba(192,192,192,0.3);
+    border-top-left-radius: 10px;
+    margin-top: 1%;
+}
+#opening #events {
+    display: inline-block;
+    width:  40%; /*40% width for phim-bio*/
+    padding-right: 5%;
+    margin-top: 1%;
+    height: auto;
     /*width:  55%;*/
-    /*border:  1px solid red;*/
-    text-align: right;
+    /*text-align: right;*/
     /*height: 280px;*/
     /*background-color: #c6e4d9;*/
     /*background-color: rgba(192,192,192,0.2);*/
-    color: #2e95ad;
+    color: #ef9432;
     /*color: #595959;*/
-    padding-right: 5%;
-    font-weight: 100;
+    float: left;
+    font-weight: 200;
     font-size: 1.25em;
-    text-shadow: 1px 1px 1px #fff;
-    /*line-height: 35px;*/
+    text-emphasis-color: #508572;
+    /*text-shadow: 0px 1px 1px #595959;*/
+}
+#opening #events h2 {
+    text-align: right;
+    font-size: 1.80em;
+}
+
+/*================================================================
+    Awards Div
+  ================================================================*/
+#award {
+    min-height: 300px;
+    text-align: center;
+}
+#award h1 {
+    color: #ef9432;
+    font-size: 3em;
+}
+#award h3 {
+    color: #738d84;
+}
+#award #awardDescription {
+    margin-top: 1%;
+    width: 20%;
+    text-align: right;
+    float: left;
+    padding-left: 50%;
+    padding-right: 5%;
+    font-size: 1.1em;
+}
+#award #photo {
+    width: 20%;
+    float: left;
+    margin: 0 auto;
 }
 
 
-#mainContent #featured-dish {
-    height: 600px;
-    clear: both;   
-}
+/*=========================================================
+    Just Like Home Div
+  =========================================================*/
 #mainContent #like-home {
     padding: 20px 10px;
     height: auto;
@@ -222,13 +299,15 @@ tfoot, thead, tr, th, td {
 #mainContent #like-home h2 {
     color: #595959;
     text-align: center;
+    font-size: 2em;
 }
 
 /*==========================================================
     Customer Feedback
   ===========================================================*/
 #reviewWrap {
-    height: auto;
+    margin-top: 4%;
+    min-height: 200px;
     padding: 10px 0;
 }
 #reviewWrap h1 {
@@ -260,40 +339,20 @@ blockquote {
     border-left: 3px solid #ccc;
 } 
 footer.customerInfo {
-    background-color: #508572;
+    background-color: #738d84;
     font-style: italic;
     color: #ccc;
-    font-size: 1.75em;
+    font-size: 1.50em;
     padding-left: 3%;
+    min-height: 50px;
+    border-top-left-radius: 10px;
 }
 
 
 
 
 
-#phim-bio {
-    /*width: 40%;*/
-    /*float:  right;*/
-    /*margin-top: 75%;*/ /*Temporary*/
-    /*border: solid red;*/
-    clear: both;
-    height: auto;
-    text-align: center;
-    padding:  5px 10px;
-}
-#sidebar #phim-bio img {
-    border-radius: 50%;
-    margin:  0 auto;
-}
-#sidebar #phim-bio blockquote {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    color: #a5a4a4;
-    font-style: italic;
-    margin: 30px;
-    padding: 5px;    
-    text-align: center; 
-}
+
 #sidebar {
     width: 25.5%;
     text-align: center;
@@ -342,7 +401,8 @@ footer {
     /*line-height: 1.5;*/
     /*color: #595959;*/
     /*color: #595959;*/
-    background-color: rgba(211,228,222,0.9); /*#D3E4DE=rgba(211,228,222)*/
+    background-color: #508572;
+    /*background-color: rgba(211,228,222,0.9); *//*#D3E4DE=rgba(211,228,222)*/
     /*background-color:rgba(192,192,192,0.7);*/
     /*border-top:  3px solid #508572;*/
 }
@@ -366,11 +426,11 @@ footer {
 }
 .footer-block dl dt {
     font-weight: bold;
-    color: #508572;
+    color: #ccc;
     /*text-transform: uppercase;*/
 }
 .footer-block a, .footer-block dd {
-    color: #595959;
+    color: #ccc;
     text-indent:5%;
     text-decoration: none;
 }
@@ -452,6 +512,11 @@ footer {
         color: #ccc;
         font-size: 1.3em;
         padding-left: 3%;
+    }
+
+/*Hide events for smaller screen sizes*/
+    #mainContent #opening #events {
+        display: none;
     }
 }
 
